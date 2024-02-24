@@ -9,10 +9,8 @@ function onLogin() {
   const usernameElm = document.querySelector("#username").value;
   const passwordElm = document.querySelector("#password").value;
 
-  const users = userData.find(
-    (user) => user.username == usernameElm && user.password == passwordElm
-  );
-
+  const users = userData.find((user) => user.username == usernameElm && user.password == passwordElm);
+  //penambahan ontent
   if (users) {
     localStorage.setItem("user", JSON.stringify(users));
     window.location.href = "home.html";
